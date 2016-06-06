@@ -23,3 +23,6 @@ class HatManager(object):
     @property
     def get_pressure(self):
         return self._pressure
+
+    def set_message(self, msg):
+        self.sense.show_message(msg, scroll_speed=0.05)
