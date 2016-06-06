@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, abort
 from sense_hat import SenseHat
 from hat_manager import HatManager
 
@@ -27,6 +27,7 @@ def print_message():
     color = request.json['text_color']
     bg_color = request.json['bg_color']
     hat_manager.set_message(message)
+    return jsonify(), 204
 
 
 if __name__ == '__main__':
