@@ -17,5 +17,5 @@ To have the requirements installed for the PirHat app, I would redirect you to t
 
 ## PirHat installation
 To use PirHat, follow the install instructions of each parts (middleware, front dashboard) from their Readme files :
-* (middleware)[middleware/README.md]
-* (dashboard)[front/README.md]
+* [MiddleWare](middleware/README.md)
+* [Dashboard](front/README.md)
