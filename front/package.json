@@ -1,0 +1,25 @@
+{
+  "name": "pir-hat",
+  "version": "1.0.0",
+  "description": "PirHat is an application to interact with your Raspberry Pi w/ Sense Hat",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ylerjen/pir-hat.git"
+  },
+  "keywords": [
+    "pir-hat",
+    "raspberry-pi",
+    "sense-hat",
+    "IoT"
+  ],
+  "author": "Yann Lerjen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ylerjen/pir-hat/issues"
+  },
+  "homepage": "https://github.com/ylerjen/pir-hat#readme"
+}
