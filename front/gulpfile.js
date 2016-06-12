@@ -1,9 +1,9 @@
-var gulp = require('gulp');
+var gulp        = require('gulp');
+var sass        = require('gulp-sass');
+var babel       = require('gulp-babel');
+var concat      = require('gulp-concat');
+var browserify  = require('gulp-browserify');
 var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var babel = require('gulp-babel');
-var browserify = require('gulp-browserify');
 
 
 // Static Server + watching scss/html files
@@ -16,6 +16,7 @@ gulp.task('serve', ['sass', 'babel'], () => {
     gulp.watch("./src/**/*.scss", ['sass']);
     gulp.watch("./src/**/*.js", ['babel']);
     gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("./dist/*.js").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
@@ -27,16 +28,18 @@ gulp.task('sass', () => {
 });
 
 gulp.task('babel', () => {
-    return gulp.src(["./src/**/*.js"])
-        .pipe(concat('app.js'))
+    return gulp.src(["./src/components/**/*.js", "./src/app.js"])
         .pipe(babel({
             plugins: ['transform-react-jsx'],
             presets: ['es2015']
         }))
+        /*
         .pipe(browserify({
 		  insertGlobals : true,
 		  debug : !gulp.env.production
 		}))
+        */
+        .pipe(concat('app.js'))
         .pipe(gulp.dest('dist'));
 });
 

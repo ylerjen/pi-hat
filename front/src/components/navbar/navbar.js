@@ -1,15 +1,19 @@
-var navbar = React.createClass({
-  render: function () {
+//var React = require('react');
+
+console.info('Navbar');
+
+var Navbar = React.createClass({
+  render: () => {
     return (
-        <nav class="navbar navbar-light bg-faded">
-            <div class="nav navbar-nav">
-                <a class="nav-item nav-link active" href="#">Dashboard <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Speaker</a>
-                <a class="nav-item nav-link" href="#">About</a>
+        <nav className="navbar navbar-light bg-faded">
+            <div className="nav navbar-nav">
+                <a className="nav-item nav-link active" href="#">Dashboard <span className="sr-only">(current)</span></a>
+                <a className="nav-item nav-link" href="#">Speaker</a>
+                <a className="nav-item nav-link" href="#">About</a>
             </div>
         </nav>
     );
   }
 });
-navbar.render('navbar');
-console.info('navbar');
+
+//module.exports = Navbar;

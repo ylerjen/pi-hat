@@ -1,8 +1,9 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+//var React = require('react');
+//var Root = require('./components/root/Root');
+
+console.info('app');
 
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('content')
+  <Root name="Handsome" />,
+  document.getElementById('pirhat-front')
 );
-console.info('hey');
