@@ -1,5 +1,6 @@
-//var React = require('react');
-//var Root = require('./components/root/Root');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Root from './components/root/Root';
 
 console.info('app');
 

@@ -1,10 +1,10 @@
-//var React = require('react');
-//var Navbar = require('../navbar/Navbar');
+import React from 'react';
+import Navbar from '../navbar/Navbar';
 
 console.info('root');
 
-var Root = React.createClass({
-    render: () => {
+export default class Root extends React.Component {
+    render () {
         return (
             <div>
                 <Navbar/>
@@ -12,6 +12,4 @@ var Root = React.createClass({
             </div>
         );
     }
-});
-
-//module.exports = Root;
+}

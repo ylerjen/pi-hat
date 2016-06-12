@@ -1,9 +1,9 @@
-//var React = require('react');
+import React from 'react';
 
 console.info('Navbar');
 
-var Navbar = React.createClass({
-  render: () => {
+export default class Navbar extends React.Component {
+  render () {
     return (
         <nav className="navbar navbar-light bg-faded">
             <div className="nav navbar-nav">
@@ -14,6 +14,6 @@ var Navbar = React.createClass({
         </nav>
     );
   }
-});
+}
 
-//module.exports = Navbar;
+module.exports = Navbar;
