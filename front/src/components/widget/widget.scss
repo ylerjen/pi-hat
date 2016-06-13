@@ -1,0 +1,23 @@
+.widget__title {
+    font-size: 1rem;
+    padding: 8px;
+}
+.widget__value {
+    font-size: 3rem;
+    text-align: right;
+    padding: 0 8px;
+}
+
+.widget__global-action {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: 0 none;
+    color: white;
+    
+    &:hover {
+        transform: rotate(-15deg);
+        transition: transform 0.2 ease-in-out;
+    }
+}

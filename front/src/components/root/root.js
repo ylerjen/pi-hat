@@ -1,14 +1,15 @@
 import React from 'react';
 import Navbar from '../navbar/Navbar';
-
-console.info('root');
+import Dashboard from '../dashboard/Dashboard';
+import Speech from '../speech/Speech';
 
 export default class Root extends React.Component {
     render () {
         return (
             <div>
                 <Navbar/>
-                <main>This is the content</main>
+                <Dashboard/>
+                <Speech/>
             </div>
         );
     }
