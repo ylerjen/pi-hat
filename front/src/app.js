@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './components/root/Root';
-//import { Router, Route, Link } from 'react-router'; //https://github.com/reactjs/react-router
+import { Router, Route, hashHistory } from 'react-router';
+import Dashboard from './modules/Dashboard';
+import Speech from './modules/Speech';
+import About from './modules/About';
 
+ReactDOM.render((
+  <Router history={hashHistory}>
+    <Route path="/" component={Dashboard}/>
+    <Route path="/dashboard" component={Dashboard}/>
+    <Route path="/speech" component={Speech}/>
+    <Route path="/about" component={About}/>
+  </Router>
+), document.getElementById('pirhat-front'))
 
-console.info('app');
-
-ReactDOM.render(
-  <Root/>,
-  document.getElementById('pirhat-front')
-);
 
 const langs =
 [['Afrikaans',       ['af-ZA']],
