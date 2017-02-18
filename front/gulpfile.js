@@ -1,6 +1,6 @@
 var gulp        = require('gulp');
 var sass        = require('gulp-sass');
-var concat = require('gulp-concat');
+var concat      = require('gulp-concat');
 var source      = require('vinyl-source-stream');
 var babelify    = require('babelify');
 var browserify  = require('browserify');
