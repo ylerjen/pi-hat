@@ -16,8 +16,8 @@ export default class Navbar extends React.Component {
     render () {
         return (
             <header className="app-header navbar navbar-dark bg-inverse">
-                <span className="navbar-brand"><img src="dist/assets/img/pirhat-logo.svg" title="PiπHat"/><span>PiπHat</span></span>
                 <nav className="nav navbar-nav">
+                    <span className="navbar-brand"><img src="assets/img/pirhat-logo.svg" title="PiπHat"/><span>PiπHat</span></span>
                     <a className={"nav-item nav-link "+ (this.state.currentPage === DASHBOARD ? 'active' : '')} href={"#"+DASHBOARD} onClick={this.navigateTo.bind(this,DASHBOARD)}>Dashboard</a>
                     <a className={"nav-item nav-link "+ (this.state.currentPage === SPEECH ? 'active' : '')} href={"#"+SPEECH} onClick={this.navigateTo.bind(this, SPEECH)}>Speech</a>
                     <a className={"nav-item nav-link "+ (this.state.currentPage === ABOUT ? 'active' : '')} href={"#"+ABOUT} onClick={this.navigateTo.bind(this, ABOUT)}>About</a>
@@ -26,5 +26,3 @@ export default class Navbar extends React.Component {
         );
     }
 }
-
-module.exports = Navbar;
