@@ -8,7 +8,7 @@ var browserSync = require('browser-sync').create();
 
 
 // Static Server + watching scss/html/js files
-gulp.task('serve', ['sass', 'bundle', 'copy'], () => {
+gulp.task('serve', ['sass', 'bundle', 'copy'], function() {
 
     browserSync.init({
         server: "./"
@@ -18,13 +18,13 @@ gulp.task('serve', ['sass', 'bundle', 'copy'], () => {
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
-gulp.task('copy', () => {
+gulp.task('copy', function() {
     return gulp.src("./src/assets/**/*.*")
         .pipe(gulp.dest('dist/assets/'));
 });
 
 // Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', () => {
+gulp.task('sass', function() {
     return gulp.src("./src/**/*.scss")
         .pipe(sass())
         .pipe(concat('app.css'))
@@ -34,7 +34,7 @@ gulp.task('sass', () => {
 });
 
 // Create js app bundle 
-gulp.task('bundle', () => {
+gulp.task('bundle', function() {
     return browserify(
         {
             debug: true, // Gives us sourcemapping
