@@ -1,7 +1,8 @@
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, hashHistory } from 'react-router';
 
-default export route = render((
+
+export default render((
   <Router history={hashHistory}>
-    <Route path="/" component={App}/>
+    <Route path="/" component="{App}" />
   </Router>
 ), document.getElementById('app'))
