@@ -9,7 +9,7 @@ module.exports = env => {
   return {
      // entry tells webpack where to start looking.
     entry: {
-      app: path.join(__dirname, '../src/'),
+      app: path.join(__dirname, '../src/app.js'),
       vendor: ['react', 'react-dom', 'react-router'],
     },
     /**
@@ -26,7 +26,7 @@ module.exports = env => {
         {
           test: /\.(js)$/, // look for .js files
           exclude: /node_modules/,
-          loader: 'babel', // preprocess with that babel goodness we installed earlier
+          loader: 'babel-loader', // preprocess with that babel goodness we installed earlier
           query: {
             cacheDirectory: true,
           },
