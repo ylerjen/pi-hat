@@ -15,14 +15,26 @@ export default class Navbar extends React.Component {
     }
     render () {
         return (
-            <header className="app-header navbar navbar-dark bg-inverse">
-                <nav className="nav navbar-nav">
-                    <span className="navbar-brand"><img src="assets/img/pirhat-logo.svg" title="PiπHat"/><span>PiπHat</span></span>
-                    <a className={"nav-item nav-link "+ (this.state.currentPage === DASHBOARD ? 'active' : '')} href={"#"+DASHBOARD} onClick={this.navigateTo.bind(this,DASHBOARD)}>Dashboard</a>
-                    <a className={"nav-item nav-link "+ (this.state.currentPage === SPEECH ? 'active' : '')} href={"#"+SPEECH} onClick={this.navigateTo.bind(this, SPEECH)}>Speech</a>
-                    <a className={"nav-item nav-link "+ (this.state.currentPage === ABOUT ? 'active' : '')} href={"#"+ABOUT} onClick={this.navigateTo.bind(this, ABOUT)}>About</a>
-                </nav>
-            </header>
+            <nav className="app-header navbar navbar-toggleable-md navbar-inverse bg-inverse">
+                <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <h1 className="navbar-brand mb-0" ><img src="assets/img/pirhat-logo.svg" title="PiπHat"/> PiπHat</h1>
+
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav mr-auto">
+                        <li className={"nav-item "+ (this.state.currentPage === DASHBOARD ? 'active' : '')}>
+                            <a className="nav-link" href={"#"+DASHBOARD} onClick={this.navigateTo.bind(this,DASHBOARD)}>Dashboard</a>
+                        </li>
+                        <li className={"nav-item "+ (this.state.currentPage === SPEECH ? 'active' : '')}>
+                            <a className="nav-link" href={"#"+SPEECH} onClick={this.navigateTo.bind(this, SPEECH)}>Speech</a>
+                        </li>
+                        <li className={"nav-item "+ (this.state.currentPage === ABOUT ? 'active' : '')}>
+                            <a className="nav-link" href={"#"+ABOUT} onClick={this.navigateTo.bind(this, ABOUT)}>About</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         );
     }
 }
