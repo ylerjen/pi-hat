@@ -22,16 +22,23 @@ module.exports = env => {
     },
 
     module: {
-      loaders: [ // Loaders allow you to preprocess files!
-        {
-          test: /\.(js)$/, // look for .js files
-          exclude: /node_modules/,
-          loader: 'babel-loader', // preprocess with that babel goodness we installed earlier
-          query: {
-            cacheDirectory: true,
-          },
-        },
-      ],
+      rules: [{
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader',
+          options: { presets: ['es2015'] }
+        }],
+      }, {
+          test: /\.s[ac]ss$/,
+          use: [{
+              loader: "style-loader" // creates style nodes from JS strings
+          }, {
+              loader: "css-loader" // translates CSS into CommonJS
+          }, {
+              loader: "sass-loader" // compiles Sass to CSS
+          }]
+      }]
     },
 
     plugins: [

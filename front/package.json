@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node config/webpack-dev-server",
-    "watch": "gulp serve"
+    "build": "webpack config/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -37,11 +37,10 @@
     "babel-loader": "^6.3.2",
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.23.0",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-sass": "^2.3.1",
     "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.0",
     "redux-devtools": "^3.3.2",
+    "sass-loader": "^6.0.2",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
   }
