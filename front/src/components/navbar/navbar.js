@@ -1,3 +1,5 @@
+import './navbar.scss'; //css import for webpack
+
 import React from 'react';
 
 const DASHBOARD = 'dashboard';
@@ -19,7 +21,7 @@ export default class Navbar extends React.Component {
                 <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <h1 className="navbar-brand mb-0" ><img src="assets/img/pirhat-logo.svg" title="PiπHat"/> PiπHat</h1>
+                <h1 className="navbar-brand mb-0" ><img src="assets/svg/pirhat-logo.svg" title="PiπHat"/> PiπHat</h1>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className={"nav-item "+ (this.state.currentPage === DASHBOARD ? 'active' : '')}>
