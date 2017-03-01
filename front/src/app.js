@@ -5,14 +5,21 @@ import Dashboard from './modules/Dashboard';
 import Speech from './modules/Speech';
 import About from './modules/About';
 
+// render(
+//   <Root />,
+//   document.getElementById('pirhat-front')
+// );
+
+
 ReactDOM.render((
   <Router history={hashHistory}>
-    <Route path="/" component={Dashboard}/>
+    <Route path="/" component={Dashboard} />
     <Route path="/dashboard" component={Dashboard}/>
     <Route path="/speech" component={Speech}/>
     <Route path="/about" component={About}/>
   </Router>
-), document.getElementById('pirhat-front'))
+  ), document.getElementById('pirhat-front')
+);
 
 
 const langs =

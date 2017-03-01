@@ -20,11 +20,10 @@ export default class Navbar extends React.Component {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <h1 className="navbar-brand mb-0" ><img src="assets/img/pirhat-logo.svg" title="PiπHat"/> PiπHat</h1>
-
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className={"nav-item "+ (this.state.currentPage === DASHBOARD ? 'active' : '')}>
-                            <a className="nav-link" href={"#"+DASHBOARD} onClick={this.navigateTo.bind(this,DASHBOARD)}>Dashboard</a>
+                            <a className="nav-link" href={"#"+DASHBOARD} onClick={this.navigateTo.bind(this, DASHBOARD)}>Dashboard</a>
                         </li>
                         <li className={"nav-item "+ (this.state.currentPage === SPEECH ? 'active' : '')}>
                             <a className="nav-link" href={"#"+SPEECH} onClick={this.navigateTo.bind(this, SPEECH)}>Speech</a>
