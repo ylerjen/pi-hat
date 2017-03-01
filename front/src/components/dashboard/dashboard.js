@@ -1,3 +1,5 @@
+import './dashboard.scss'; //css import for webpack
+
 import React from 'react';
 import Widget from '../widget/Widget';
 

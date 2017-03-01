@@ -1,3 +1,5 @@
+import './speech.scss'; //css import for webpack
+
 import React from 'react';
 
 export default class Speech extends React.Component {

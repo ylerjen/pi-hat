@@ -1,3 +1,5 @@
+import './vendor.scss'; //css import for webpack
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router';

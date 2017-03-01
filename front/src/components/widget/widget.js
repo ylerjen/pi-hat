@@ -1,3 +1,5 @@
+import './widget.scss'; //css import for webpack
+
 import React from 'react';
 
 export default class widget extends React.Component {
